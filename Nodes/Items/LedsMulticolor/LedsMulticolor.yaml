@@ -1,0 +1,784 @@
+Name: LedsMulticolor
+Type: FolderType
+Children:
+- Name: CoT_CMP_LedMulticolor
+  Id: g=a36c0af082cf6fb584c4459b35608ade
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    Value: 72.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    Value: 72.0
+  - Name: Icon
+    Type: MultiStateImage
+    Children:
+    - Name: StateValue
+      Type: BaseDataVariableType
+      DataType: Int32
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../enable"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: Int32
+          ReferenceType: HasParameter
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../state"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: Int32
+          ReferenceType: HasParameter
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../state"
+            - Name: ns=2;Pairs
+              Type: BaseObjectType
+              ModellingRule: None
+              Children:
+              - Name: Pair2
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 9
+              - Name: Pair3
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 10
+              - Name: Pair4
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 11
+              - Name: Pair5
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 12
+              - Name: Pair6
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 13
+              - Name: Pair7
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 14
+              - Name: Pair8
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 15
+              - Name: Pair
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 7
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 16
+              - Name: Pair1
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 8
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 17
+    - Name: States
+      Type: BaseObjectType
+      Children:
+      - Name: 'off: Enable (State1)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=off, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-ok: Enable (State2)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 1
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-ok, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-warning: Enable (State3)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 2
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-warning, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-error: Enable (State4)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 3
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-error, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-fatal: Enable (State5)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 4
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-fatal, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-message: Enable (State6)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 5
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-message, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-finished: Enable (State7)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 6
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-finished, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-canceled: Enable (State8)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 7
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-canceled, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-loading: Enable (State9)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 8
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-loading, state=enabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'off: Disable (State10)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 9
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=off, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-ok: Disable (State11)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 10
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-ok, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-warning: Disable (State12)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 11
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-warning, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-error: Disable (State13)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 12
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-error, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-fatal: Disable (State14)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 13
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-fatal, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-message: Disable (State15)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 14
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-message, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-finished: Disable (State16)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 15
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-finished, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-canceled: Disable (State17)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 16
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-canceled, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+      - Name: 'on-loading: Disable (State18)'
+        Type: MultiStateImageState
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 17
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=4;%PROJECTDIR%/Images/type=on-loading, state=disabled.svg"
+        - Name: Opacity
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      Value: 56.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      Value: 56.0
+    - Name: NumberAnimation1
+      Type: NumberAnimation
+      Children:
+      - Name: To
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 360.0
+      - Name: Target
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/VariableTypes/BaseVariableType"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Rotation@NodeId"
+      - Name: Running
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#state}==8"
+          - Name: ns=2;Sourcestate
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../state"
+      - Name: Loops
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: -1
+      - Name: Duration
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 1500
+      - Name: From
+        Type: BaseDataVariableType
+        DataType: Float
+        ModellingRule: Optional
+    - Name: Rotation
+      Type: BaseVariableType
+      DataType: Size
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: NumberAnimation2
+      Type: NumberAnimation
+      Children:
+      - Name: To
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: Target
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/VariableTypes/BaseVariableType"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Rotation@NodeId"
+      - Name: Running
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#state}!=8"
+          - Name: ns=2;Sourcestate
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../state"
+      - Name: Duration
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 10
+  - Name: state
+    Type: BaseDataVariableType
+    DataType: Int16
+  - Name: enable
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: visibility
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../enable"
+  - Name: Visible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: ConditionalConverter1
+      Type: ConditionalConverter
+      Children:
+      - Name: Condition
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasSource
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{#State}>8 || {#State}<0"
+          - Name: ns=2;SourceState
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../state"
+      - Name: TrueValue
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+      - Name: FalseValue
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasParameter
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../visibility"
+  - Name: Rotation
+    Type: BaseVariableType
+    DataType: Size
+  - Name: StateValueChanged1
+    Type: VariableChangedEventDispatcher
+    Children:
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../state"
+    - Name: VariableValueChangedEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Icon/NumberAnimation1/To@NodeId"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Float
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Children:
+              - Name: ConditionalConverter1
+                Type: ConditionalConverter
+                Children:
+                - Name: Condition
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: ExpressionEvaluator1
+                    Type: ExpressionEvaluator
+                    Children:
+                    - Name: Expression
+                      Type: BaseDataVariableType
+                      DataType: String
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: "{#state}==8"
+                    - Name: ns=2;Sourcestate
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../../state"
+                - Name: TrueValue
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: 360
+                - Name: FalseValue
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Type: VariableValueChangedEvent
+        Children:
+        - Name: VariableNodeId
+          Type: BaseVariableType
+          DataType: NodeId
+        - Name: NewValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16

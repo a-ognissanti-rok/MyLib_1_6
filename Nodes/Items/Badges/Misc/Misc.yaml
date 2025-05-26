@@ -1,0 +1,15 @@
+Name: Misc
+Type: FolderType
+Children:
+- Class: DataType
+  Name: CoT_BadgeColor
+  Id: g=efe2c931d8985bf97fbcf8ef9e57977a
+  Supertype: Enumeration
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"White"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"Dark"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

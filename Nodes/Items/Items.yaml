@@ -1,0 +1,733 @@
+Name: Items
+Type: FolderType
+Children:
+- Name: NodesCounterPanel
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "3f5a939cada255585212dc8af9d33388"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: NodesCounterPanel
+    Id: g=ab7ef95513787ecae72b59ff5a5f633d
+    Supertype: Panel
+    ReferenceType: HasComponent
+    Children:
+    - Name: RootElement
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType/CategoryFolder/ScreensCategoryFolder"
+    - Name: NodesCounterDialogLogic
+      Type: NetLogic
+      Children:
+      - Class: Method
+        Name: CountNodesInPage
+    - Name: Background
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#b3b3b3"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#ffffff"
+      - Name: CornerRadius
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 8.0
+    - Name: Divider
+      Type: PolyLine
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "M 0.000000 0.000000 L 152.000000 0.000000"
+      - Name: LineColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#b3b3b3"
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: LineThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+    - Name: Content
+      Type: ColumnLayout
+      Children:
+      - Name: TitleContent
+        Type: RowLayout
+        Children:
+        - Name: TitleString
+          Type: Label
+          Children:
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"Root element:"}
+        - Name: TitleValue
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{RootElement}@BrowseName"
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: FontWeight
+            Type: BaseDataVariableType
+            DataType: FontWeightEnum
+            ModellingRule: Optional
+            Value: 700
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+        - Name: HorizontalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+      - Name: NodesCount
+        Type: RowLayout
+        Children:
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 32.0
+        - Name: NodesCountText
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"Total nodes count:"}
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+        - Name: NodesCountValue
+          Type: Label
+          Children:
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: FontWeight
+            Type: BaseDataVariableType
+            DataType: FontWeightEnum
+            ModellingRule: Optional
+            Value: 700
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+        - Name: HorizontalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+      - Name: Details
+        Type: GridLayout
+        Children:
+        - Name: Rows
+          Type: BaseDataVariableType
+          DataType: String
+          ValueRank: OneDimension
+          ArrayDimensions: [0]
+          Value: ["Auto"]
+        - Name: Columns
+          Type: BaseDataVariableType
+          DataType: String
+          ValueRank: OneDimension
+          ArrayDimensions: [0]
+          Value: ["Auto","Auto"]
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 16.0
+        - Name: ObjectsCountText
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"UI objects:"}
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: ObjectsCountValue
+          Type: Label
+          Children:
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: VariablesCountText
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"Variables:"}
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: VariablesCountValue
+          Type: Label
+          Children:
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: DynamicLinksCountText
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"DynamicLinks:"}
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: DynamicLinksCountValue
+          Type: Label
+          Children:
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: ConvertersCountText
+          Type: Label
+          Children:
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"Converters:"}
+        - Name: ConvertersCountValue
+          Type: Label
+          Children:
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 16.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 32.0
+        - Name: HorizontalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 8.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 24.0
+      - Name: VerticalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 8.0
+- Name: ClockLogic
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "918ff67ac15f4c9bc42a8875a5dfa1ee"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 3
+  - Name: ClockLogic
+    Id: g=0d9c8b94048ce135eb16558311b325bc
+    Supertype: NetLogic
+    ReferenceType: HasComponent
+    Children:
+    - Name: Time
+      Type: BaseDataVariableType
+      DataType: DateTime
+      Children:
+      - Name: Year
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 2
+      - Name: Month
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Day
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Hour
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Minute
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Second
+        Type: BaseDataVariableType
+        DataType: Int32
+    - Name: UTCTime
+      Type: BaseDataVariableType
+      DataType: DateTime
+      Children:
+      - Name: Year
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Month
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Day
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Hour
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Minute
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: Second
+        Type: BaseDataVariableType
+        DataType: Int32
+- Name: MyImage
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "5bd8ec6bd063c45e4fc2c2d767d17ab3"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 5
+  - Name: MyImage
+    Id: g=cd6ee3ba77ff62f43b9d6218bcfbe7b6
+    Supertype: Image
+    ReferenceType: HasComponent
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=4;%PROJECTDIR%/image.svg"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 448.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 262.0
+- Name: CoT_Components
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "760f928decc8b639d47fe4eb33678507"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: CoT_Components
+    Type: FolderType
+    Children:
+    - File: Misc/Misc.yaml
+    - File: CheckBoxes/CheckBoxes.yaml
+    - File: GroupBoxes/GroupBoxes.yaml
+    - File: Switches/Switches.yaml
+    - File: TextOuts/TextOuts.yaml
+    - File: TextIns/TextIns.yaml
+    - File: RadioButtons/RadioButtons.yaml
+    - File: Cards/Cards.yaml
+    - File: VarOuts/VarOuts.yaml
+    - File: VarIns/VarIns.yaml
+    - File: HeaderItems/HeaderItems.yaml
+    - File: ContentElements/ContentElements.yaml
+    - File: Buttons/Buttons.yaml
+    - File: Labels/Labels.yaml
+    - File: SyntegonTexts/SyntegonTexts.yaml
+    - File: Badges/Badges.yaml
+    - File: LedsMulticolor/LedsMulticolor.yaml
+    - File: PLCCommChecks/PLCCommChecks.yaml
+    - File: Dialogs/Dialogs.yaml
+    - File: SegmentedControls/SegmentedControls.yaml
+    - File: TableCells/TableCells.yaml
+    - File: Rows/Rows.yaml
+    - File: Dropdowns/Dropdowns.yaml
+- Name: MySpecialObject
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "0d42dea800aeccefdc00aa7527232502"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: MySpecialObject
+    Id: g=d7498ec4eff5fd2cbf72c31017021204
+    Supertype: BaseObjectType
+    Children:
+    - Name: Variable1
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: Variable2
+      Type: BaseDataVariableType
+      DataType: Byte
+    - Name: Variable3
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: Variable4
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: Variable5
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Variable6
+      Type: BaseDataVariableType
+      DataType: SByte
+    - Name: Variable7
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "0"
+    - Name: Variable8
+      Type: BaseDataVariableType
+      DataType: UInt16
+    - Name: Variable9
+      Type: BaseDataVariableType
+      DataType: UInt32
+    - Name: Variable10
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable11
+      Type: BaseDataVariableType
+      DataType: Byte
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable12
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable13
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable14
+      Type: BaseDataVariableType
+      DataType: Int32
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable15
+      Type: BaseDataVariableType
+      DataType: SByte
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable16
+      Type: BaseDataVariableType
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+      Value: ["0","0","0","0","0","0","0","0"]
+    - Name: Variable17
+      Type: BaseDataVariableType
+      DataType: UInt16
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable18
+      Type: BaseDataVariableType
+      DataType: UInt32
+      ValueRank: OneDimension
+      ArrayDimensions: [8]
+    - Name: Variable19
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable20
+      Type: BaseDataVariableType
+      DataType: Byte
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable21
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable22
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable23
+      Type: BaseDataVariableType
+      DataType: Int32
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable24
+      Type: BaseDataVariableType
+      DataType: SByte
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable25
+      Type: BaseDataVariableType
+      DataType: String
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+      Value: 
+       {
+        "Type": 12,
+        "Dimensions": [8,8],
+        "Body": [
+         "0","0","0","0","0","0","0","0",
+         "","","","","","","","",
+         "","","","","","","","",
+         "","","","","","","","",
+         "","","","","","","","",
+         "","","","","","","","",
+         "","","","","","","","",
+         "","","","","","","",""
+        ]
+       }
+    - Name: Variable26
+      Type: BaseDataVariableType
+      DataType: UInt16
+      ValueRank: 2
+      ArrayDimensions: [8,8]
+    - Name: Variable27
+      Type: BaseDataVariableType
+      DataType: UInt32
+      ValueRank: 2
+      ArrayDimensions: [8,8]

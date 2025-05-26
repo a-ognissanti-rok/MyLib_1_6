@@ -1,0 +1,18 @@
+Name: Translations
+Type: FolderType
+Children:
+- Name: CoT_TemplateDictionary
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [3,3],
+    "Body": [
+     "Key","en-US","de-DE",
+     "CoT_Button","Button","Taste",
+     "CoT_NoSelection","No selection","Keine Auswahl"
+    ]
+   }

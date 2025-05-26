@@ -1,0 +1,23 @@
+#region Using directives
+using System;
+using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+using FTOptix.UI;
+using FTOptix.HMIProject;
+using FTOptix.NativeUI;
+using FTOptix.Retentivity;
+using FTOptix.CoreBase;
+using FTOptix.Core;
+using FTOptix.NetLogic;
+using FTOptix.OPCUAServer;
+#endregion
+
+public class DesignTimeNetLogic1 : BaseNetLogic
+{
+    [ExportMethod]
+    public void Method1()
+    {
+        var test = new HelloWorldApp();
+        test.HelloWorld();
+    }
+}
