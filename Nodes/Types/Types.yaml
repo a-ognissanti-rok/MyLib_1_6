@@ -142,3 +142,69 @@ Children:
 - Class: Reference
   Type: HasComponent
   Target: g=05c31cbffda4a51d45eb9a96088ddb43
+- Name: MyDigitalAlarm
+  Id: g=d6a8d350d3011dec69e7af4b37c07185
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=11;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=11;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Variable2
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Variable3
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Variable4
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Variable5
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Variable6
+    Type: BaseDataVariableType
+    DataType: Int32

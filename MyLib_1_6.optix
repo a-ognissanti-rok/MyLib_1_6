@@ -41,15 +41,23 @@ Project:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
    Version: 4.0
+  11:
+   Uri: 'urn:FTOptix:Alarm'
+   Module: FTOptix.Alarm
+   Version: 6.0
+  12:
+   Uri: 'urn:FTOptix:Alarm:Net'
+   Module: FTOptix.Alarm.Net
+   Version: 1.2
  Statistics:
-  TotalNodeCount: 7435
-  Objects: 1499
-  ObjectTypes: 40
-  Variables: 5876
+  TotalNodeCount: 7457
+  Objects: 1501
+  ObjectTypes: 42
+  Variables: 5894
   VariableTypes: 0
   DataTypes: 18
   Methods: 2
-  References: 56
+  References: 67
   ReferenceTypes: 0
   Files: 38
  Nodes:
